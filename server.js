@@ -7,21 +7,23 @@ var path = require('path');
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-app.get("/", function(req, res) {
-    res.send("Welcome to Catch-The-Match Page");
-  });
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// ================================================================================
+// ROUTER
+// The below points our server to a series of "route" files.
+// ================================================================================
+//require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-
-app.use(function (req, res) {
- res.setHeader('Content-Type', 'text/plain')
- res.write('you posted:\n')
- res.end(JSON.stringify(req.body, null, 2))
-});
 
 
 // Listener
