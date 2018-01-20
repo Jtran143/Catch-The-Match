@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body class = "bg">
     <ul class="nav nav-tabs justify-content-center">
-      <h1>Match The Catch</h1>
+      <h1>Catch The Match</h1>
       <br><br>
     </ul>
     <div class="container mt-3">
         <div class="jumbotron">
             <hr>
             <br><br>
-            <h1 style = "text-align: center"><i class="fa fa-facebook-square" aria-hidden="true"></i>CATCH THE MATCH</h1>
+            <h1 style = "text-align: center"><i class="fa fa-facebook-square" aria-hidden="true"></i>Match The Catch</h1>
             <br><br>
             <hr>
             <br><br>
@@ -30,10 +32,114 @@
             <div class = "container">
                 <div class = "row">
                     <div class = "col-lg-6">
-                        <div style = "text-align: center"><a href="" class="btn btn-success btn-lg btn-primary" id="toSignUp"><i class="" aria-hidden="true"> </i></span>Sign Up</a></div>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toSignUp">Sign Up</button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="toSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title" id="exampleModalLabel">Sign Up</h2>
+                              
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form">
+                                
+                                <div class="tab-content">
+                                  <div id="signup">   
+
+                                    
+                                    <form action="/" method="post">
+                                    
+                                    <div class="top-row">
+                                      <div class="field-wrap">
+                                        <label>
+                                          First Name<span></span>
+                                        </label>
+                                        <input type="text" required autocomplete="off" />
+                                      </div>
+                                  
+                                      <div class="field-wrap">
+                                        <label>
+                                          Last Name<span class="req">*</span>
+                                        </label>
+                                        <input type="text"required autocomplete="off"/>
+                                      </div>
+                                    </div>
+                          
+                                    <div class="field-wrap">
+                                      <label>
+                                        Email Address<span class="req">*</span>
+                                      </label>
+                                      <input type="email"required autocomplete="off"/>
+                                    </div>
+                                    
+                                    <div class="field-wrap">
+                                      <label>
+                                        Set A Password<span class="req">*</span>
+                                      </label>
+                                      <input type="password"required autocomplete="off"/>
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="button button-block btn-primary"/>Submit</button>
+                                    </form>
+                          
+                                  </div>
+                                
+                                </div><!-- tab-content -->
+                                
+                          </div> <!-- /form -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class = "col-lg-6">
-                        <div style = "text-align: center"><a href="" class="btn btn-success btn-lg btn-primary" id="login"><i class="" aria-hidden="true"> </i></span>Login</a></div>
+                      <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#Login">Login</button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title" id="Login">Welcome Back</h2>
+                              
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="login">   
+                                <h1>Login</h1>
+                                
+                                <form action="/" method="post">
+                                
+                                  <div class="field-wrap">
+                                  <label>
+                                    Email Address<span class="req">*</span>
+                                  </label>
+                                  <input type="email"required autocomplete="off"/>
+                                </div>
+                                
+                                <div class="field-wrap">
+                                  <label>
+                                    Password<span class="req">*</span>
+                                  </label>
+                                  <input type="password"required autocomplete="off"/>
+                                </div>
+                                
+                                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                                
+                                <button class="button button-block btn-primary"/>Log In</button>
+                                
+                                </form>
+                      
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
             <hr>
                 </div>
@@ -42,28 +148,7 @@
     </div>
 </body>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Sign Up</button>
-<!-- Modal -->
-<div class="modal fade" id="toSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">Sign Up</h2>
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 </html>
