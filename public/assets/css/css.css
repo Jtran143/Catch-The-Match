@@ -1,6 +1,8 @@
 @font-face { 
     font-family: Fine College; 
-    src: url('Fine College.ttf'); 
+    src: url('Fine College.ttf');
+    font-family: Streetwear;
+    src: url('Streetwear.otf');
 } 
 
 
@@ -12,22 +14,23 @@ body, html {
 .nav {
     background-color: black;
     text-align: center;
-    color: red;
-    font-family: Fine College;
+    color: white;
+    font-family: Streetwear;
     /* background-image: url("../images/Project2backgroundimg2.jpg"); */
 
 }
 .nav h1 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 .active {
     text-align: center;
 }
 .close {
     font-family: sans-serif;
+
 }
 .bg {
-    font-family: Fine College;
+    font-family: Streetwear;
     color: greenyellow;
     font-weight: bold;
     font-size: 2rem;
