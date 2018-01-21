@@ -7,6 +7,7 @@ var Sequelize = require("sequelize");
 var sequelize = new Sequelize("sports_db", "root", "root", {
   host: "localhost",
   dialect: "mysql",
+  port : 3307,
   pool: {
     max: 5,
     min: 0,

@@ -5,11 +5,11 @@ module.exports = function(app) {
 
 
 app.post("/api/", function(req, res) {
-      //console.log(req.body);
-     // console.log('success');
+      console.log(req.body);
+     console.log('success');
       Users.create({
       
-      email : req.body.email,
+      email : "aa", 
       firstname : req.body.firstname,
       lastname : req.body.lastname,
       date_stamp : req.body.date_stamp
