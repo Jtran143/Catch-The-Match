@@ -11,15 +11,15 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Static directory to be served
-app.use(express.static("./public"));
+//Static directory to be served
+app.use(express.static("./app/public"));
 
 // ================================================================================
 // ROUTES
 // The below points our server to a series of "route" files.
 // ================================================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+require("./app/routes/api-routes.js")(app);
+require("./app/routes/html-routes.js")(app);
 
 
 // parse application/x-www-form-urlencoded
