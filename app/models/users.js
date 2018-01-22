@@ -18,7 +18,11 @@ var Users = sequelize.define("users", {
   },
   lastname: {
     type: Sequelize.STRING
+  },
+  user_password: {
+    type: Sequelize.STRING
   }
+
 });
 // Syncs with DB
 Users.sync();
