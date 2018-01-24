@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Profile</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <!-- Link to external js logic sheet -->
+  <script src="js/logic.js"></script>
+
+  <!-- link to external stylesheet and CSS-->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  <!-- external fonts for nav bar -->
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+
+  <!-- external fonts for footer -->
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
+  <!-- Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Social Media Icons for Footer-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Logic to Load Dropdown Menu Button -->
+  <script>
+    $(".dropdown-button").dropdown();
+  </script>
+
+  <!-- Logic to initialize dropdown elements -->
+  <script>
+    $(document).ready(function () {
+      $('select').material_select();
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <div class="content-inside">
+      <nav class="black lighten-1 navbar" role="navigation">
+        <div class="nav-wrapper container nav-container">
+          <a href="http://www.google.com" class="brand-logo left" id="logo">
+            <img class="trophy-logo" class="responsive-img" src="trophy-icon2.png" />
+          </a>
+          <ul id="nav-mobile" class="side-nav">
+            <li>
+              <a href="" class="waves-effect waves-light btn">Profile</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li>
+              <a href="http://www.google.com" class="purple">Sign Out</a>
+            </li>
+          </ul>
+
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="">Profile</a>
+            </li>
+
+            <!-- Dropdown Trigger -->
+            <li>
+              <a class="dropdown-button" href="http://www.google.com" data-activates="dropdown1">Home
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+      <br>
+      
+        <h5 align="left" class="">Update your profile info here!</h5>
+      
+     
+      <div class="personal-info-form">
+        <div class="row" class="personal-info">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate" id="first_name">
+                <label for="icon_prefix">First Name</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">accessibility</i>
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <select multiple>
+                  <option value="" disabled selected>Top U.S. Leagues</option>
+                  <option value="1">NBA</option>
+                  <option value="2">NFL</option>
+                  <option value="3">MLB</option>
+                </select>
+                <label>Select your favorite leagues:</label>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                  <select multiple>
+                    <option value="" disabled selected>Top U.S. Leagues</option>
+                    <option value="1">Golden State Warriors</option>
+                    <option value="2">Los Angeles Lakers</option>
+                    <option value="3">Minnesota Timberwolves</option>
+                  </select>
+                  <label>Select your favorite teams:</label>
+                </div>
+              </div>
+
+              <a class="waves-effect waves-light btn green"><i class="material-icons left">save</i>SAVE</a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br><br><br>
+
+  <footer class="page-footer black" class="footer">
+    <div class="container" class="footer-copyright">
+      <div class="row" class="footer-row">
+        <p class="center-align copyright copyright-info">COPYRIGHT 2018 THE SALTY PRETZELS </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  scripts for materialize-->
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
