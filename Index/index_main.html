@@ -37,8 +37,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Logic to Load Dropdown Menu Button -->
-  <script> $(".dropdown-button").dropdown(); </script>
+  <script>
+    $(".dropdown-button").dropdown();
+  </script>
 
+  <!-- JQuery Plugin Initialization for Modal -->
+  <script>
+    $(document).ready(function () {
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  </script>
 </head>
 
 <body>
@@ -63,10 +72,10 @@
 
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="http://www.google.com">Join Us</a>
+              <a href="#modal1">Join Us</a>
             </li>
             <li>
-              <a href="http://www.google.com">Sign In</a>
+              <a href="#modal1">Sign In</a>
             </li>
           </ul>
         </div>
@@ -84,12 +93,13 @@
           </div>
 
           <div class="row center">
-            <a href="http://www.google.com" id="download-button join-btn" class="btn-large waves-effect waves-light purple">
+            <a href="#modal1" id="download-button join-btn modal-trigger-join" class="btn-large waves-effect waves-light purple modal-trigger">
               <i class="material-icons left">people_outline</i>Join the Movement</a>
           </div>
 
+
           <div class="row center">
-            <a href="http://www.google.com" id="download-button login-btn" class="btn-large waves-effect waves-light blue">
+            <a href="#modal1" id="download-button login-btn modal-trigger-login" class="btn-large waves-effect waves-light blue modal-trigger">
               <i class="material-icons left">people_outline</i>LOGIN</a>
           </div>
         </div>
@@ -106,12 +116,11 @@
   </footer>
 
   <!-- Modal -->
-  <div class="modal fade" id="toSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="toSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" id="exampleModalLabel">Sign Up</h2>
-
+          <h2 class="modal-title" id="modal-label">Sign Up</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -125,8 +134,20 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
+  <!-- Modal Structure FOR NEW MATERIALIZE MODAL -->
+  <div id="modal-goes-here">
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>
 
   <!--  scripts for materialize-->
   <script src="js/materialize.js"></script>
