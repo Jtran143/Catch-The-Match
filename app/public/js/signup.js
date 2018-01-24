@@ -2,7 +2,7 @@
   // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
   $(".submit").on("click", function(event) {
     event.preventDefault();
-if ($("#password").val().trim() === $("#cpassword").val().trim()) {
+  if ($("#password").val().trim() === $("#cpassword").val().trim()) {
     // Here we grab the form elements
     var newUser = {
       userFname: $("#fname").val().trim(),
@@ -13,7 +13,6 @@ if ($("#password").val().trim() === $("#cpassword").val().trim()) {
     //console.log(newUser);
 
     
-
       var currentURL = window.location.origin;
       $.post(currentURL + "/api/", newUser,
           function(data) {
@@ -25,7 +24,6 @@ if ($("#password").val().trim() === $("#cpassword").val().trim()) {
             $("#password").val("");
             $("#cpassword").val("");
           });
-
  }
  else
  {

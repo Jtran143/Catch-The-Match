@@ -1,6 +1,7 @@
 
 var Users = require("../models/users.js");
 
+
 module.exports = function(app) {
 
 
@@ -13,12 +14,26 @@ app.post("/api/", function(req, res) {
       firstname : req.body.userFname,
       lastname : req.body.userLname,
       user_password : req.body.userPassword,
+      
 
       });
-
+      res.json(true);
+    });
      // res.json(true);
 
-  });
+     app.get("/api/profile/:email", function(req, res) {
+       //console.log("R " + req.params.email);
+        // if (req.params.email) {
+           Users.findAll({
+             where: {
+               email: req.params.email
+             }
+            }).then(function(results) {
+            //console.log('s' + res.json(results));
+            res.json(results);
+         });
+       // }
+      });
 
 
 }
