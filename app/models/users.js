@@ -21,6 +21,9 @@ var Users = sequelize.define("users", {
   },
   user_password: {
     type: Sequelize.STRING
+  },
+  dob: {
+    type: Sequelize.DATE
   }
 
 });

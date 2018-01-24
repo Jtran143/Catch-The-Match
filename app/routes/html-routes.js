@@ -13,8 +13,8 @@ module.exports = function(app) {
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
-  app.get("/personalInfo", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/personalInfo.html"));  
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/profile.html"));  
   });
 
   app.get("/landing", function(req, res) {
