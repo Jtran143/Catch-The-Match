@@ -1,0 +1,127 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.content-inside {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  font-family: "Alfa Slab One", cursive;
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+h3 {
+  font-size: 20pt;
+  color: black;
+  font-family: "Alfa Slab One", cursive;
+  padding-top: 30pt;
+  padding-left: 15%;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 45px;
+}
+
+h4 {
+  font-size: 20pt;
+  color: black;
+  font-family: 'Chewy', cursive;
+  padding-top: 10pt;
+  padding-left: 15%;
+  vertical-align: middle;
+  margin: 0;
+}
+
+h5 {
+  color: black;
+  font-family: 'Chewy', cursive;
+  display: inline-block;
+  text-align: center;
+  padding-left: 
+}
+
+table {
+  margin: 0 auto;
+}
+
+
+nav ul li:hover {
+  background-color: purple;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  min-height: 100%;
+  flex: 1 0 auto;
+}
+
+.content-inside {
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+#logo {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+#nav-mobile {
+  font-family: "Lobster", cursive;
+}
+
+#header {
+  font-family: "Alfa Slab One", cursive;
+  text-shadow: black 1px 1px 1px;
+  font-size: 60pt;
+  padding-top: 210px;
+}
+
+#sub-header {
+  text-shadow: black 1px 1px 1px;
+  font-size: 20pt;
+  padding-bottom: 10px;
+}
+
+.footer {
+  height: 50px;
+  margin-top: -50px;
+  overflow: hidden;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  font-family: "Alfa Slab One", cursive;
+  height: 45px;
+  margin-top: -50px;
+}
+
+.logo-footer {
+  inline-size: 20%;
+  display: inline-block
+}
+
+.copyright-logo {
+  inline-size: 20%;
+  display: inline-block
+}
+
+.copyright-info {
+  font-family: 'Luckiest Guy', cursive;
+}
