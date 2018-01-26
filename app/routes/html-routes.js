@@ -4,30 +4,31 @@
 // ===============================================================================
 var path = require("path");
 
-
+var express = require("express");
+var router = express.Router();
 // ===============================================================================
 // ROUTING
 // ===============================================================================
-module.exports = function(app) {
+
   // HTML GET Requests
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
-  app.get("/profile", function(req, res) {
+  router.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/profile_page.html"));  
   });
 
-  app.get("/landing", function(req, res) {
+  router.get("/landing", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/landing_page.html"));
   });
 
-  app.use("/", function(req, res) {
+  router.use("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index_main.html"));  
   });
 
   // If no matching route is found default to home
- app.get("*", function(req, res) {
+ router.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index_main.html"));
   });
 
-};
+module.exports = router;

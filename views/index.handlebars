@@ -1,0 +1,23 @@
+<div>
+    Hello: <span id="msg"></span>
+</div>
+<script>
+
+axios({
+    method: "get",
+    url:"/landing",
+    headers: {
+        "Authorization": "Bearer "+ localStorage.getItem("token")
+    }
+})
+.then(function(response) {
+    console.log(response);
+    var elem = document.getElementById("msg");
+    elem.innerHTML = response.data;
+    var payload = JSON.parse(window.atob(localStorage.getItem("token").split('.')[1]));
+    console.log(payload)
+})
+.catch(function(err) {
+    console.error(err);
+})
+</script>
