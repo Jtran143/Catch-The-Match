@@ -1,0 +1,100 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.navbar { 
+  width: 100%;
+  font-family: "Alfa Slab One", cursive;
+  display: inline-block;
+  padding: 0;
+  overflow: hidden; 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav ul li:hover {
+  background-color: purple;
+}
+
+body {
+  background-image: url(../../index-background.jpeg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-position: ;
+  background-repeat: no-repeat;
+  background-size: ;
+}
+
+.content {
+  min-height:100%;
+  position:relative;
+}
+
+.content-inside {
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+#logo {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+#nav-mobile {
+  font-family: Lobster, cursive;
+}
+
+#header {
+  font-family: "Alfa Slab One", cursive;
+  text-shadow: black 2px 2px 2px;
+  font-size: 60pt;
+  padding-top: 210px;
+}
+
+#sub-header {
+  text-shadow: black 2px 2px 2px;
+  font-size: 20pt;
+  padding-bottom: 10px;
+}
+
+.footer {
+  height: 50px;
+  margin-top: -50px;
+  overflow: hidden;
+  width:100%;
+  bottom: 0;
+  position: absolute;
+}
+
+.logo-footer {
+  inline-size: 20%;
+  display: inline-block
+}
+
+.copyright-logo {
+  inline-size: 20%;
+  display: inline-block
+}
+
+.copyright {
+  vertical-align: middle;
+}
+
+.footer-row {
+  vertical-align: middle;
+
+}
+
+#footer-copyright {
+  vertical-align: middle;
+}
+
+.copyright-info {
+  font-family: 'Luckiest Guy', cursive;
+}
