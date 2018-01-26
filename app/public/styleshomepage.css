@@ -1,0 +1,16 @@
+#logo {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+#nav-mobile {
+    font-family: 'Lobster', cursive;
+}
+
+.nav-wrapper {
+    background-color: black;
+}
+
+.sub-header {
+    text-align: center;
+}
