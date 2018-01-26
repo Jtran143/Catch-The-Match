@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Profile</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <!-- Link to external js logic sheet -->
+  <script src="js/logic.js"></script>
+
+  <!-- link to external stylesheet and CSS-->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  <!-- external fonts for nav bar -->
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+
+  <!-- external fonts for footer -->
+  <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+
+  <!-- Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- External Font for Headers-->
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Luckiest+Guy" rel="stylesheet">
+
+  <!--Social Media Icons for Footer-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Logic to Load Dropdown Menu Button -->
+  <script>
+    $(".dropdown-button").dropdown();
+  </script>
+
+  <!-- Logic to initialize dropdown elements -->
+  <script>
+    $(document).ready(function () {
+      $('select').material_select();
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <div class="content-inside">
+      <nav class="black lighten-1 navbar" role="navigation">
+        <div class="nav-wrapper container nav-container">
+          <a href="http://www.google.com" class="brand-logo left" id="logo">
+            <img class="trophy-logo" class="responsive-img" src="trophy-icon2.png" />
+          </a>
+          <ul id="nav-mobile" class="side-nav">
+            <li>
+              <a href="" class="waves-effect waves-light btn">Profile</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li>
+              <a href="http://www.google.com" class="purple">Sign Out</a>
+            </li>
+          </ul>
+
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="">Profile</a>
+            </li>
+
+            <!-- Dropdown Trigger -->
+            <li>
+              <a class="dropdown-button" href="http://www.google.com" data-activates="dropdown1">Home
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+      <br>
+
+      <h3 align="left" class="">Welcome to Catch the Match!</h3>
+      <h4>Here's what's going on today with your teams:</h4>
+    </div>
+
+    <h5>[DYNAMICALLY ADD TEAM NAME HERE]</h5>
+    <div class="container api-table">
+      <table class="centered" class="responsive-table" style="width:50%; height:100%" class="tablesclass">
+        <thead>
+          <tr>
+            <th>Matches Today</th>
+            <th>STANDINGS</th>
+            <th>NEWS</th>
+            <th>UPCOMING MATCHES</th>
+            <th>WHERE CAN I WATCH?</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>vs. dolphins 5:30 pm (home)</td>
+            <td>1st AFC East</td>
+            <td>-Patriots going to Super Bowl! -Deflate Gate another probablity?</td>
+            <td>Saturday 1/13 vs. Titans</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>[DYNAMICALLY ADD TEAM NAME HERE]</h5>
+      <table class="centered" class="responsive-table" style="width:50%; height:100%" class="tablesclass">
+        <thead>
+          <tr>
+            <th>Matches Today</th>
+            <th>STANDINGS</th>
+            <th>NEWS</th>
+            <th>UPCOMING MATCHES</th>
+            <th>WHERE CAN I WATCH?</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>[DYNAMICALLY POPULATE]</td>
+            <td>[DYNAMICALLY POPULATE]</td>
+            <td>[DYNAMICALLY POPULATE]</td>
+            <td>[DYNAMICALLY POPULATE]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+
+  <footer class="page-footer black" class="footer">
+    <div class="container" class="footer-copyright">
+      <div class="row" class="footer-row">
+        <p class="center-align copyright copyright-info">COPYRIGHT 2018 THE SALTY PRETZELS </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  scripts for materialize-->
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>

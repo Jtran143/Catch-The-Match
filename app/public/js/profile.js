@@ -1,29 +1,45 @@
- // When user hits get btn
- $("#getbtn").on("click", function(event) {
-    event.preventDefault();
-    
-    var email = "shant_wanes@yahoo.com"
-// Make an AJAX get request to our api, including the user's book in the url
-   var currentURL = window.location.origin;
+ 
+ var email = "shant_wanes@yahoo.com"
 
-   $.get(currentURL + "/api/profile/" + email, function(data) {
-        
-       //console.log(currentURL + "/api/profile/" + email);
-       console.log(data);
-      renderUsers(data);
-    // });
-  });
+ var currentURL = window.location.origin;
+
+ $.get(currentURL + "/api/profile/" + email, function(data) {
+  renderUsers(data);
+    //console.log(data);
+  
+});
+
+ $("#savebtn").on("click", function(event) {
+   event.preventDefault();
+   if ($("#password").val().trim() !== "") {
+    // Here we grab the form elements
+    var updateUser = {
+      userFname: $("#first_name").val().trim(),
+      userLname: $("#last_name").val().trim(),
+      userEmail: $("#email").val().trim(),
+      userPassword: $("#password").val().trim()
+    };
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + "/api/profile", updateUser,
+        function(data) {});
+
+  }
+  else
+  {
+      alert("The Password can't be blank");
+  }
+
 
  });
 
   function renderUsers(data) {
     if (data.length !== 0) {
-      $("#test").empty();
-      $("#test").show();
+      //console.log(data[0].firstname);
       $("#first_name").val(data[0].firstname);
       $("#last_name").val(data[0].lastname);
       $("#email").val(data[0].email);
-      $("#dob").val(data[0].dob);
+      $("#password").val(data[0].user_password);
     //   for (var i = 0; i < data.length; i++) {
     //     var div = $("<div>");
         
