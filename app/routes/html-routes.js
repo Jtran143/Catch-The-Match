@@ -19,6 +19,7 @@ var router = express.Router();
   });
 
   router.get("/landing", function(req, res) {
+    console.log('req', req);
     res.sendFile(path.join(__dirname, "../public/landing_page.html"));
   });
 
@@ -30,5 +31,7 @@ var router = express.Router();
  router.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index_main.html"));
   });
+
+  
 
 module.exports = router;

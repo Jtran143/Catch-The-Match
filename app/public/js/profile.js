@@ -2,15 +2,16 @@
  var email = "shant_wanes@yahoo.com"
 
  var currentURL = window.location.origin;
-
- $.get(currentURL + "/api/profile/" + email, function(data) {
-  renderUsers(data);
-    //console.log(data);
+console.log("hello")
+//  $.get(currentURL + "/api/profile/" + email, function(data) {
+//   renderUsers(data);
+//     //console.log(data);
   
-});
+// });
 
  $("#savebtn").on("click", function(event) {
    event.preventDefault();
+   console.log("hi")
    if ($("#password").val().trim() !== "") {
     // Here we grab the form elements
     var updateUser = {
@@ -21,9 +22,13 @@
     };
     var currentURL = window.location.origin;
 
-    $.post(currentURL + "/api/profile", updateUser,
-        function(data) {});
-
+    $.post("/auth/register", {email: updateUser.userEmail, password: updateUser.userPassword})
+    .then(function(resp) {
+      window.location.assign("/")
+    })
+    .catch(function(err) {
+      console.error(err);
+    })
   }
   else
   {

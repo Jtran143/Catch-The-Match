@@ -101,7 +101,7 @@
      
       <div class="personal-info-form">
         <div class="row" class="personal-info">
-          <form class="col s12">
+          <form id="save-submit" class="col s12">
             <div class="row">
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
@@ -156,7 +156,7 @@
                 </div>
               </div>
 
-              <a id = "savebtn" class="waves-effect waves-light btn green"><i class="material-icons left">save</i>SAVE</a>
+              <button id = "savebtn" class="waves-effect waves-light btn green"><i class="material-icons left">save</i>SAVE</button>
           </form>
         </div>
       </div>
@@ -172,7 +172,14 @@
       </div>
     </div>
   </footer>
-
+  <script>
+    $(document).ready(function() {
+      $("#saveBtn").on("click", function(e) {
+        e.preventDefault();
+        window.location.assign("/landing")
+      })
+    })
+  </script>
 
   <!--  scripts for materialize-->
   <script src="js/materialize.js"></script>
@@ -181,5 +188,6 @@
   <script src="/js/profile.js"></script>
 
 </body>
+
 
 </html>
