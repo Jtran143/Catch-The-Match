@@ -2,15 +2,10 @@
     Hello: <span id="msg"></span>
 </div>
 <script>
-//    axios.post("/auth/login", {email: "sam@sam.com", password: "nice" })
-//    .then(function(response) {
-//        console.log(response);
-//        localStorage.setItem("token", response.data.token);
-//
-//    })
+
 axios({
     method: "get",
-    url:"/api/test",
+    url:"/landing",
     headers: {
         "Authorization": "Bearer "+ localStorage.getItem("token")
     }

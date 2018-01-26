@@ -1,7 +1,7 @@
 /**
  * Created by sammy on 1/21/18.
  */
-var models = require("../../models");
+var models = require("../models");
 var crypto = require('crypto');
 var jwt = require("jsonwebtoken");
 var ctrl = {};
