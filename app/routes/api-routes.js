@@ -13,8 +13,7 @@ app.post("/api/", function(req, res) {
       email : req.body.userEmail, 
       firstname : req.body.userFname,
       lastname : req.body.userLname,
-      user_password : req.body.userPassword,
-      
+      user_password : req.body.userPassword
 
       });
       res.json(true);
@@ -35,6 +34,21 @@ app.post("/api/", function(req, res) {
          });
        // }
       });
+
+      app.post("/api/profile", function(req, res) {
+        console.log(req.body);
+        console.log('success');
+         Users.update({
+         
+         firstname : req.body.userFname,
+         lastname : req.body.userLname,
+         user_password : req.body.userPassword
+         },
+         {where : {email : req.body.userEmail}
+   
+         })
+         
+       });
 
 
 }

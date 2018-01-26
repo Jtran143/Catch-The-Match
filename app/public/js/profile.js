@@ -23,7 +23,6 @@
 
     $.post(currentURL + "/api/profile", updateUser,
         function(data) {});
-
   }
   else
   {
