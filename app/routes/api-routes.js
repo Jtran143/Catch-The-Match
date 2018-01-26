@@ -36,8 +36,8 @@ app.post("/api/", function(req, res) {
       });
 
       app.post("/api/profile", function(req, res) {
-        console.log(req.body);
-        console.log('success');
+        //console.log(req.body);
+        //console.log('success');
          Users.update({
          
          firstname : req.body.userFname,
