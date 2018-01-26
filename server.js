@@ -26,7 +26,6 @@ require("./app/routes/html-routes.js")(app);
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-// TESTing
 app.use(bodyParser.json())
 
 
