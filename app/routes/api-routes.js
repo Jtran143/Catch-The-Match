@@ -1,3 +1,10 @@
+var express = require("express");
+var router = express.Router();
+
+router.get("/landing", function(req, res) {
+    res.send("you are authenticated!");
+});
+module.exports = router;
 
 var Users = require("../models/users.js");
 
