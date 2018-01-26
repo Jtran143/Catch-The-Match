@@ -22,6 +22,7 @@ console.log("hello")
     };
     var currentURL = window.location.origin;
 
+<<<<<<< HEAD
     $.post("/auth/register", {email: updateUser.userEmail, password: updateUser.userPassword})
     .then(function(resp) {
       window.location.assign("/")
@@ -29,6 +30,10 @@ console.log("hello")
     .catch(function(err) {
       console.error(err);
     })
+=======
+    $.post(currentURL + "/api/profile", updateUser,
+        function(data) {});
+>>>>>>> 012a4dff98b26884f9b2c253a96c85429726045c
   }
   else
   {

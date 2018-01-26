@@ -16,7 +16,7 @@
 //      // console.log(req.body);
 //      //console.log('success');
 //       Users.create({
-      
+
 //       email : req.body.userEmail, 
 //       firstname : req.body.userFname,
 //       lastname : req.body.userLname,
