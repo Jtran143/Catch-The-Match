@@ -1,0 +1,57 @@
+@font-face { 
+    font-family: Fine College; 
+    src: url('Fine College.ttf');
+    font-family: Streetwear;
+    src: url('Streetwear.otf');
+} 
+
+
+body, html {
+    height: 100%;
+    
+}
+
+.nav {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: Streetwear;
+    /* background-image: url("../images/Project2backgroundimg2.jpg"); */
+
+}
+.nav h1 {
+    font-size: 5rem;
+}
+.active {
+    text-align: center;
+}
+.close {
+    font-family: sans-serif;
+
+}
+.bg {
+    font-family: Streetwear;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 2rem;
+
+            /* The image used */
+            background-image: url("../images/Project2backgroundimg.jpg");
+            
+                /* Full height */
+
+            
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+}
+
+.jumbotron {
+    background: transparent !important;
+}
+
+.col-6-lg {
+    text-align: center;
+}
